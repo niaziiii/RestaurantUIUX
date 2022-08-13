@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+
+
+@import './modules/_variables';
+body{
+  background-color: $color-golden;
+}
+@import './modules/_navbar';
+@import './modules/_header';
+@import './modules/_Aboutus';
+@import './modules/_SpecialMenu';
+@import './modules/_Chef';
+@import './modules/Intro';
+
+
+

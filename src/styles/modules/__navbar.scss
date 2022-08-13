@@ -1,0 +1,131 @@
+.app__Navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: $color-black;
+    color: $color-white;
+    &__logo{
+        img{
+            width: 140px;
+        }
+    }
+    &__lists{
+        flex: 1;
+        justify-content: center;
+        display: flex;
+        li {
+            list-style: none;
+            margin: 0 1.5rem;
+            a{
+                font-size: 16px;
+                font-family: $font-alt;
+                transition: .3s ease-in;
+                color: $color-golden;
+                &:hover{
+                    color: $color-grey;
+                }
+            }
+        }
+    }
+    &__Logins{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        div{
+            margin: 0 1.5rem;
+            height: 30px;
+            width: 1px;
+            background-color: $color-grey;
+        }
+        a{
+            font-size: 16px;
+            font-family: $font-alt;
+            transition: .5s ease-in;
+            &:hover{
+                border-bottom: 1px solid $color-gray;
+            }
+        }
+    }
+}
+
+
+
+
+.app__Navbar__small-Screen{
+    display: none;
+
+    &__overlay{
+        width: 100%;
+        height: 100vh;
+        background-color: $color-black;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .closeNavBar{
+            cursor: pointer;
+            position: absolute;
+            top: 4%;
+            right: 3%;
+        }
+    }
+    &__lists{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        li{
+            margin: 1rem 0;
+            font-family: $font-alt;
+            font-size: 20px;
+            a{
+                transition: .5s ease-in;
+                color: $color-golden;
+
+                &:hover{
+                    border-bottom: 1px solid $color-gray;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1150px) {
+    
+    .app__Navbar{
+        &__lists{ display: none;}
+    }
+    .app__Navbar__small-Screen{
+        display: flex;
+        &__logins{
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .app__Navbar{
+        padding: .5rem 1rem;
+        &__Logins{ display: none;}
+    }
+    .app__Navbar__small-Screen{
+        &__logins{
+            display: flex;
+            flex-direction: column;
+            a{
+                font-family: $font-alt;
+                margin: 1rem 0;
+                font-weight: 800;
+            }
+        }
+    }
+}

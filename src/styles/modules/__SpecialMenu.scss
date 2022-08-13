@@ -1,0 +1,146 @@
+.app__specialMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-black;
+  margin:  0 3rem ;
+  padding: 2rem 0;
+  &__text {
+    padding: 2rem 0;
+    text-align: center;
+    h1 {
+      color: $color-golden;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    &__drinks {
+    width: 100%;
+      flex: 2;
+      padding: 1rem 1.5rem;
+      color: $color-white;
+      font-family: $font-base;
+      h1 {
+        font-weight: 600;
+        font-size: 45px;
+        line-height: 130%;
+      }
+    }
+
+
+    &__image {
+      margin: 0 2rem;
+      img {
+        width: 444px;
+        height: 659px;
+      }
+    }
+
+    &__lists{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        &__heading{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1rem;
+            h2{ 
+                margin-right: auto;
+                color: $color-golden;
+            }
+            div{
+                width: 5rem;
+                height: 2px;
+                background-color: $color-white;
+            }
+            p{
+                margin-left: .9rem;
+            }
+        }
+        &__text{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: $color-grey;
+            p{ font-size: 18px; margin-top: .5rem;}
+
+        }
+    }
+
+  }
+  &__button{
+    margin-top: 1.5rem;
+    button{
+      background-color: $color-golden;
+      color: $color-black;
+    }
+  }
+}
+
+
+@media screen and (max-width:1150px) {
+  .app__specialMenu{
+    margin: 0%;
+    &__image {
+      margin: 0%;
+  }
+}
+}
+
+@media screen and (max-width:1050px) {
+  .app__specialMenu{
+    margin: 0%;
+
+  &__content {
+    flex-direction: column;
+    &__lists{
+      width: 30rem;
+      margin: auto;
+    }
+    &__drinks{
+      text-align: center;
+    }
+
+    &__image {
+      margin: 1rem 0%;
+      img{
+        width: 100%;
+        height: 70vh;
+      }
+  }
+  }
+}
+}
+
+@media screen and (max-width:1050px) {
+  .app__specialMenu{
+  &__content {
+    &__lists{
+      width: 17rem;
+      margin: auto;
+    }
+    &__drinks{
+      padding: 0%;
+      text-align: start;
+      h1{
+        text-align: center;
+      }
+    }
+
+    &__image {
+      margin: 1rem 0%;
+      img{
+        width: 100%;
+        height: 60vh;
+      }
+  }
+  }
+}
+}
