@@ -606,12 +606,26 @@ body {
     padding: 0rem;
   }
 }
+.app__Intro__video::-webkit-media-controls {
+  display: none;
+}
+
 .app__Intro {
+  background-color: #0C0C0C;
+  margin: 0 3rem;
   position: relative;
+  padding: 4rem 0;
 }
 .app__Intro i {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 40px;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__Intro {
+    margin: 0%;
+  }
 }/*# sourceMappingURL=style.css.map */
