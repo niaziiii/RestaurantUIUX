@@ -1,0 +1,85 @@
+.app__Laurels{
+    margin: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__image{
+        flex: 1;
+        margin-left: 1rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__content{
+        flex: 1;
+        h1{
+            color: $color-golden;
+            margin: 1rem 0;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px 20px;
+        }
+    }
+    &__lists{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &__img{
+            flex: .8;
+            img{ width: 50px;}
+        }
+        &__content{
+            flex: 2;
+            h3{ 
+                color: $color-golden;
+                margin-bottom: .5rem;
+            }
+            p{
+                color: $color-grey;
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width:1150px) {
+ .app__Laurels{
+    margin: 0%;
+ }   
+}
+
+@media screen and (max-width:1050px) {
+    .app__Laurels{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      &__image{
+        padding: 3rem 0;
+        margin: 0% auto;
+        img{
+            width: 100%;
+            height: 70vh;
+        }
+      }
+    }   
+   }
+
+   @media screen and (max-width:650px) {
+    .app__Laurels{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &__content{
+        ul{
+            grid-template-columns: 1fr;
+        }
+      }
+    }   
+   }
